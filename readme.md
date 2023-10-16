@@ -1,8 +1,8 @@
 Nepali/English date
 
--npm i
--npm run dev
+-- npm i
+-- npm run dev
 
-api
--api/english
--api/nepali
+api endPoint
+-- api/english
+-- api/nepali
