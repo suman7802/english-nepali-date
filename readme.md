@@ -12,10 +12,5 @@ To get started, follow these steps:
 
 ```bash
 npm install
--- npm run dev
-
-
-- api endPoints
--- GET api/english
--- GET api/nepali
+npm run dev
 ```
