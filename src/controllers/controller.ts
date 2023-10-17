@@ -2,7 +2,7 @@ import {Request, Response} from 'express';
 import NepaliDateConverter from 'nepali-date-converter';
 
 const currentDate = new Date();
-const englishDate = currentDate.toString();
+const englishDate = currentDate;
 const nepaliDate = NepaliDateConverter.fromAD(currentDate).toString();
 
 export const controller = {
@@ -10,6 +10,6 @@ export const controller = {
     return res.send(englishDate);
   },
   nepali: async (req: Request, res: Response) => {
-    return res.send(nepaliDate);
+    return res.json(nepaliDate);
   },
 };

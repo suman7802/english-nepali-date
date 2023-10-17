@@ -15,13 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.controller = void 0;
 const nepali_date_converter_1 = __importDefault(require("nepali-date-converter"));
 const currentDate = new Date();
-const englishDate = currentDate.toString();
+const englishDate = currentDate;
 const nepaliDate = nepali_date_converter_1.default.fromAD(currentDate).toString();
 exports.controller = {
     english: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         return res.send(englishDate);
     }),
     nepali: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-        return res.send(nepaliDate);
+        return res.json(nepaliDate);
     }),
 };
