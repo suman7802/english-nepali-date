@@ -8,7 +8,9 @@ import {userRouter} from './routers/route';
 const app: Application = express();
 const port = process.env.PORT || 8000;
 
-app.use(helmet());
+helmet({
+  crossOriginResourcePolicy: false,
+});
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(parser.urlencoded({extended: true}));
