@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "tsc",
-    "dev": "conc . \"npx tsc --watch\" \"nodemon dist/index.js\""
+    "dev": "conc . \"npx tsc --watch\" \"nodemon dist/index.js\"",
+    "install-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
