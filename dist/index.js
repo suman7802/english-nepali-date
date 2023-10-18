@@ -32,16 +32,18 @@ const helmet_1 = __importDefault(require("helmet"));
 const parser = __importStar(require("body-parser"));
 const morgan_1 = __importDefault(require("morgan"));
 const route_1 = require("./routers/route");
+const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 const port = process.env.PORT || 8000;
 app.use((0, helmet_1.default)());
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
 app.use(parser.urlencoded({ extended: true }));
+app.use((0, cors_1.default)());
 app.use('/api', route_1.userRouter);
 app.use('*', (req, res) => {
     res.send('NOT FOUND');
 });
 app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+    console.log(`Listening on port ${port}`);
 });
